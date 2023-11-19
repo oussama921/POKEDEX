@@ -1,0 +1,30 @@
+.container{
+    color: black;
+    position: absolute;
+    left: 50%;
+    bottom: 14vh;
+    transform: translate(-50%);
+    font-size: 1.8vh;
+
+    .stat-container{
+        display: flex;
+        align-items: center;
+
+        .stat-title{
+            width: 2.5vw;
+        }
+
+        .base-stat-counter{
+            width: 10vw;
+            background-color: #F0F0F0;
+            height: 1vh;
+            margin-left: 1vw;
+            border-radius: 0.3vh;
+
+            .stat-value{
+                height: 1vh;
+                border-radius: 0.3vh;
+            }
+        }
+    }
+}

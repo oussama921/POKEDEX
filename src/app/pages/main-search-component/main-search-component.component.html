@@ -8,12 +8,12 @@
             <div class="title">
                 Pokemon Name or Id
             </div>
-            <input type="text"/>
+            <input type="text" [(ngModel)]="nameId"/>
             <div class="btns-container">
-                <div class="btn search-btn">
+                <div (click)="search()" class="btn search-btn">
                     Search
                 </div>
-                <div class="btn random-btn">
+                <div (click)="searchRandom()" class="btn random-btn">
                     Random
                 </div>
             </div>

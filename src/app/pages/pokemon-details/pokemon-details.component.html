@@ -1,0 +1,25 @@
+<div class="container" [ngStyle]="{'background-color': pokemonTypeColor}">
+  <app-back></app-back>
+  <div class="content-container">
+    <img id="pokemon-img" src="https://img.pokemondb.net/sprites/home/normal/{{selectedPokemon?.name}}.png"/>
+    <div id="pokemon-title">{{selectedPokemon?.name| titlecase}}</div>
+    <div id="type-container">
+      <div class="type" [ngStyle]="{'background-color': TypeColor[type.pokemon_v2_type.name]}" *ngFor="let type of selectedPokemon?.pokemon_v2_pokemontypes">
+        {{ type.pokemon_v2_type.name | uppercase }}
+      </div>
+    </div>
+    
+    <div id="flavorText">
+      {{selectedPokemon?.pokemon_v2_pokemonspecy?.pokemon_v2_pokemonspeciesflavortexts![0].flavor_text}}
+    </div>
+
+    <div class="tabs-container"  [ngStyle]="{'color': pokemonTypeColor}">
+      <div class="tab" (click)="selectedTab=1" [ngStyle]="{'background-color':selectedTab==1? pokemonTypeColor:'' }" [ngClass]="{'selected-tab':selectedTab==1}">Stats</div>
+      <div class="tab" (click)="selectedTab=2" [ngStyle]="{'background-color':selectedTab==2? pokemonTypeColor:''}" [ngClass]="{'selected-tab':selectedTab==2}">Evolutions</div>
+      <div class="tab" (click)="selectedTab=3" [ngStyle]="{'background-color':selectedTab==3? pokemonTypeColor:''}" [ngClass]="{'selected-tab':selectedTab==3}">MOVES</div>
+    </div>
+
+    <app-stats *ngIf="selectedTab==1"></app-stats>
+    <app-evolutions *ngIf="selectedTab==2"></app-evolutions>
+  </div>
+</div>

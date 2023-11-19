@@ -1,4 +1,21 @@
+@import 'ngx-toastr/toastr';
+
 /* You can add global styles to this file, and also import other style files */
 body{
     margin: 0;
+}
+
+
+@font-face {
+	font-family: "Single Day";
+	src: url(assets/fonts/SingleDay-Regular.ttf) format("truetype");
+	font-weight: 1;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Abel";
+	src: url(assets/fonts/Abel-Regular.ttf) format("truetype");
+	font-weight: 1;
+	font-style: normal;
 }

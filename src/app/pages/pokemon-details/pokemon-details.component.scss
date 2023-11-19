@@ -1,0 +1,82 @@
+.container{
+    font-family: Abel;
+    color: #4F4F4F;
+    height: 100vh;
+    width: 100vw;
+
+    app-back{
+        position: absolute;
+        left: 9vw;
+        top: 6vh;
+    }
+    .content-container{
+        background-color: white;
+        width: 80vw;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 75vh;
+        transform: translate(-50%);
+        border-radius: 5vh 5vh 0px 0px;
+
+        #pokemon-img{
+            position: absolute;
+            left: 50%;
+            top: -20vh;
+            height: 28vh;
+            transform: translate(-50%);
+        }
+        #pokemon-title{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 9vh;
+            font-size: 5vh;
+        }
+        #type-container{
+            display: flex;
+            position: absolute;
+            top: 17vh;
+            left: 50%;
+            transform: translate(-50%);
+            gap: 3vw;
+
+            .type{
+                font-size: 1.5vh;
+                background-color: #5DBE62;
+                color: white;
+                padding: 0.8vh 2vw;
+                border-radius: 1.5vh;
+            }
+        }
+
+        #flavorText{
+            width: 60vw;
+            position: absolute;
+            top: 26vh;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 2vh;
+        }
+
+        .tabs-container{
+            display: flex;
+            gap: 10vw;
+            top: 36vh;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+
+            .selected-tab{
+                color: white;
+            }
+            .tab{
+                cursor: pointer;
+                padding: 0.8vh 2vw;
+                border-radius: 1.5vh;
+                font-size: 1.5vh;
+            }
+        }
+    }
+}
