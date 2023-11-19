@@ -1,0 +1,1830 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "DataResponsePokemon",
+            "id": "interface-DataResponsePokemon-4694b015279a9a65c1a1f3323d8314867f9954f2e16011623fb12d1a0640b307bc1394a5413b845e010a7d279a3d50fe479d47211622b31d584045f15aa41550",
+            "file": "src/app/models/DataResponsePokemon.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Pokemon } from \"./Pokemon\"\r\n\r\nexport interface DataResponsePokemon{\r\n    pokemon_v2_pokemon:Pokemon[];\r\n\r\n}",
+            "properties": [
+                {
+                    "name": "pokemon_v2_pokemon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Pokemon[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Pokemon",
+            "id": "interface-Pokemon-b6669dec387ba22f35998b8c9481afe062e59279df9d74c0d2efcf74e73aa5a607082b0a5ee2a6c0547ea28e66000bee003d35ff4ff8f31b84ac8cb6c07a3c02",
+            "file": "src/app/models/Pokemon.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Specy } from \"./Specy\";\r\nimport { Stat } from \"./Stat\";\r\nimport { Type } from \"./Type\";\r\n\r\nexport interface Pokemon{\r\n    id:number;\r\n    name:string;\r\n    pokemon_v2_pokemonspecy:Specy\r\n    pokemon_v2_pokemonstats:Stat[]\r\n    pokemon_v2_pokemontypes:Type[]\r\n\r\n}",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "pokemon_v2_pokemonspecy",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Specy",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "pokemon_v2_pokemonstats",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Stat[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "pokemon_v2_pokemontypes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Specy",
+            "id": "interface-Specy-e9d4905a7b00b7e2e199f7e9ecdb41529ecbe38aa2931b51cc5a1684b796a19dd0c379df8f5662a68a5a8cb8cf5998767fe0d957d76eeda6756e174f80e88c2c",
+            "file": "src/app/models/Specy.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { SpecyElement } from \"./SpecyElement\"\r\n\r\nexport interface Specy{\r\n    pokemon_v2_evolutionchain:{\r\n        pokemon_v2_pokemonspecies:SpecyElement[]\r\n    }\r\n    pokemon_v2_pokemoncolor:{\r\n        name:string\r\n    }\r\n    pokemon_v2_pokemonspeciesflavortexts:[\r\n        {\r\n            flavor_text:string\r\n        }\r\n    ]\r\n}",
+            "properties": [
+                {
+                    "name": "pokemon_v2_evolutionchain",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "pokemon_v2_pokemoncolor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "pokemon_v2_pokemonspeciesflavortexts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[literal type]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "SpecyElement",
+            "id": "interface-SpecyElement-8fbca0d78f530fad1ea73db76b4b2f0a023cb646020a8e4c3517002d61401571e2fa9e105a1eec5d46c5b14b9de0187897429dfa643e373d243509de6ae5f503",
+            "file": "src/app/models/SpecyElement.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface SpecyElement{\r\n    name:string ;\r\n    order:number;\r\n}",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "order",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Stat",
+            "id": "interface-Stat-145e4db004660723accce357bacfdfa342227d2de360b3003cf0d17733b535e0be614a5048521b6848fcc448c72ff1acd7a2a5a29390b7dd423955e06cc6f963",
+            "file": "src/app/models/Stat.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Stat{\r\n    base_stat:number;\r\n    effort:number;\r\n    pokemon_v2_stat:{\r\n        name:string\r\n    }\r\n}",
+            "properties": [
+                {
+                    "name": "base_stat",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "effort",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "pokemon_v2_stat",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Type",
+            "id": "interface-Type-71e6b3e7d815f03465c1854a242146153c7ee7dbd2e5717a4b65d8365fd65f2906f1a4c42bcc6663004722cb13d64cf0d3f8fdff65005c98d1e064e8c58ed400",
+            "file": "src/app/models/Type.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Type{\r\n    pokemon_v2_type:{\r\n        name:string\r\n    } \r\n}",
+            "properties": [
+                {
+                    "name": "pokemon_v2_type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "PokemonService",
+            "id": "injectable-PokemonService-8e554877f41a17cea2863fa8e8e74a9a8cd322920c1a74faf05239eb74d0a3c7297ba4b6d58d35c995fb37f22bb14d7ebbb57d9992ed6317773cfb65d75382af",
+            "file": "src/app/services/pokemon.service.ts",
+            "properties": [
+                {
+                    "name": "selectedPokemon",
+                    "defaultValue": "new BehaviorSubject<Pokemon|null>(null)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methods": [
+                {
+                    "name": "GetPokemon",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number | null",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "name",
+                            "type": "string | null",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<Pokemon>",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number | null",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "name",
+                            "type": "string | null",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getRandomPokemon",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<Pokemon>",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\r\nimport { Apollo } from \"apollo-angular\";\r\nimport {  GET_ALL_POKEMONS, GET_POKEMON_BY_ID, GET_POKEMON_BY_NAME } from \"../operations/graphql.operations\";\r\nimport { BehaviorSubject, Observable, Subject, map } from \"rxjs\";\r\nimport { Pokemon } from \"../models/Pokemon\";\r\nimport { DataResponsePokemon } from \"../models/DataResponsePokemon\";\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class PokemonService {\r\n  selectedPokemon = new BehaviorSubject<Pokemon|null>(null)\r\n  \r\n  constructor(private apollo: Apollo) {}\r\n\r\n  GetPokemon(id:number|null,name:string|null): Observable<Pokemon> {\r\n    if(id){\r\n      return this.apollo.watchQuery<DataResponsePokemon>({\r\n        query: GET_POKEMON_BY_ID,\r\n        variables: { id },\r\n      }).valueChanges.pipe(map((res)=>res.data.pokemon_v2_pokemon[0]));\r\n    }else{\r\n      return this.apollo.watchQuery<DataResponsePokemon>({\r\n        query: GET_POKEMON_BY_NAME,\r\n        variables: { name },\r\n      }).valueChanges.pipe(map((res)=>res.data.pokemon_v2_pokemon[0]));\r\n    }\r\n  }\r\n  getRandomPokemon():Observable<Pokemon> {\r\n    return this.apollo.watchQuery<DataResponsePokemon>({\r\n      query: GET_ALL_POKEMONS,\r\n    }).valueChanges.pipe(map((res)=>{\r\n      return res.data.pokemon_v2_pokemon[Math.floor(Math.random() * (res.data.pokemon_v2_pokemon.length - 0) + 0)]\r\n    }));\r\n  }\r\n}",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "apollo",
+                        "type": "Apollo",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-0023012fe875717a39fd6a81eb76df92d366cebabeacad73a7bb4c6c567da6220dc1a721c6a135eb8a8e0929cfad2c4082a160db6ebe8747bb977b77ab1ab8f7",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<router-outlet></router-outlet>"
+        },
+        {
+            "name": "BackComponent",
+            "id": "component-BackComponent-c21a8c410bf0cb165fab6f85f86518c006389a85ddbae37656d2aaff7b2a48fb79ecd4eba2d66050059d0726123aeb6fc26c3263385bca900432621bb377145d",
+            "file": "src/app/pages/back/back.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-back",
+            "styleUrls": [
+                "./back.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./back.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "backToMain",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'app-back',\n  templateUrl: './back.component.html',\n  styleUrls: ['./back.component.scss']\n})\nexport class BackComponent implements OnInit {\n\n  constructor(private router:Router) { }\n\n  ngOnInit() {\n  }\n  backToMain(){\n    this.router.navigate([''])\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".backArrowImg{\r\n    position: absolute;\r\n    cursor: pointer;\r\n    padding: 2vh;\r\n    img{\r\n        height: 6vh;\r\n    }\r\n}",
+                    "styleUrl": "./back.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div (click)=\"backToMain()\" class=\"backArrowImg\" >\n  <img  src=\"https://ik.imagekit.io/do4qnws3h/Arrow-back.png?updatedAt=1700391996260\">\n</div>"
+        },
+        {
+            "name": "EvolutionsComponent",
+            "id": "component-EvolutionsComponent-a38c812e01d60f82cf51053436a510c4e9e868602bf9b6236e50ca1775a37e5413bb28187e53fcaab60f441c1eb8034ed545759374e8a437585ebe134363ed58",
+            "file": "src/app/pages/pokemon-details/evolutions/evolutions.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-evolutions",
+            "styleUrls": [
+                "./evolutions.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./evolutions.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "selectedPokemon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Pokemon | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "TypeColor",
+                    "defaultValue": "TypeColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Pokemon } from 'src/app/models/Pokemon';\nimport { SpecyElement } from 'src/app/models/SpecyElement';\nimport { TypeColor } from 'src/app/models/TypeColor';\nimport { PokemonService } from 'src/app/services/pokemon.service';\n\n@Component({\n  selector: 'app-evolutions',\n  templateUrl: './evolutions.component.html',\n  styleUrls: ['./evolutions.component.scss']\n})\nexport class EvolutionsComponent implements OnInit {\n  selectedPokemon!:Pokemon|null;\n  TypeColor:any=TypeColor\n\n  constructor(private pokemonService:PokemonService) { }\n\n  ngOnInit() {\n    this.pokemonService.selectedPokemon.subscribe((pokemon)=>{\n      this.selectedPokemon=pokemon\n      console.log(\"stat\",pokemon)\n    })\n  }\n\n  get getEvolutionChain():SpecyElement[]{\n    return this.selectedPokemon?.pokemon_v2_pokemonspecy?.pokemon_v2_evolutionchain?.pokemon_v2_pokemonspecies!\n  }\n  get pokemonTypeColor(){\n    return this.TypeColor[this.selectedPokemon?.pokemon_v2_pokemontypes![0].pokemon_v2_type.name!]\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container{\r\n    display: flex;\r\n    align-items: center;\r\n    position: absolute;\r\n    bottom: 12vh;\r\n    left: 50%;\r\n    transform: translate(-50%);\r\n\r\n    .pokemon-container{\r\n        display: flex;\r\n        align-items: center;\r\n        gap: 5vw;\r\n\r\n        .pokemon-img{\r\n            height: 15vh;\r\n        }\r\n        .pokemon-name{\r\n            font-size: 2vw;\r\n        }\r\n        .arrow {\r\n            margin-right: 1vw;\r\n            position: relative;\r\n\r\n            .first-stick{\r\n                width: 0.5vw;\r\n                height: 0.5vh;\r\n                background-color: green;\r\n                transform: rotate(45deg);\r\n                border-radius: 2vh;\r\n                position: absolute;\r\n                left: -0.4vw;\r\n                top: -0.17vw;\r\n            }\r\n            .second-stick{\r\n                width: 0.5vw;\r\n                height: 0.5vh;\r\n                background-color: green;\r\n                transform: rotate(-45deg);\r\n                border-radius: 2vh;\r\n                position: absolute;\r\n                left: -0.4vw;\r\n                top:  0.15vw;;\r\n            }\r\n\r\n            .tail{\r\n                width: 4vw;\r\n                height: 0.5vh;\r\n                background-color: green;\r\n                border-radius: 2vh;\r\n                position: absolute;\r\n                left: -4vw;\r\n            }\r\n          }\r\n      \r\n          \r\n    }\r\n}",
+                    "styleUrl": "./evolutions.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "getEvolutionChain": {
+                    "name": "getEvolutionChain",
+                    "getSignature": {
+                        "name": "getEvolutionChain",
+                        "type": "[]",
+                        "returnType": "SpecyElement[]",
+                        "line": 25
+                    }
+                },
+                "pokemonTypeColor": {
+                    "name": "pokemonTypeColor",
+                    "getSignature": {
+                        "name": "pokemonTypeColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 28
+                    }
+                }
+            },
+            "templateData": "<div class=\"container\">\n  <div class=\"pokemon-container\" *ngFor=\"let pokemon of getEvolutionChain;let i=index\">\n    <div>\n      <img  class=\"pokemon-img\" src=\"https://img.pokemondb.net/sprites/home/normal/{{pokemon.name}}.png\"/>\n      <div class=\"pokemon-name\">{{pokemon.name}}</div>\n    </div>\n    <div class=\"arrow\" *ngIf=\"i<getEvolutionChain.length-1\">\n      <div [ngStyle]=\"{'background-color':pokemonTypeColor}\" class=\"tail\"></div>\n      <div [ngStyle]=\"{'background-color':pokemonTypeColor}\" class=\"first-stick\"></div>\n      <div [ngStyle]=\"{'background-color':pokemonTypeColor}\" class=\"second-stick\"></div>\n    </div>\n  </div>\n</div>"
+        },
+        {
+            "name": "MainSearchComponent",
+            "id": "component-MainSearchComponent-2824183d734b94a715fbd893f6cb7e2020ece459a33113e67b57da417f873885823e9b65083872f6175a21fd5c3285087b6531f35cab464df153fd968dfee645",
+            "file": "src/app/pages/main-search-component/main-search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-main-search",
+            "styleUrls": [
+                "./main-search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./main-search.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "nameId",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "search",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "searchRandom",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 45,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Inject } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { ToastrService } from 'ngx-toastr';\nimport { Pokemon } from 'src/app/models/Pokemon';\nimport { PokemonService } from 'src/app/services/pokemon.service';\n\n@Component({\n  selector: 'app-main-search',\n  templateUrl: './main-search.component.html',\n  styleUrls: ['./main-search.component.scss']\n})\nexport class MainSearchComponent {\n\n  nameId:any;\n  constructor(private pokemonService:PokemonService,private router:Router,private toastr: ToastrService){}\n  \n  search(){\n    console.log(this.nameId)\n    let name;let id\n    if(isNaN(this.nameId)){\n      name=this.nameId;\n      id=null\n    }else{\n      name=null;\n      id=this.nameId\n    }\n    \n    this.pokemonService.GetPokemon(id,name).subscribe((pokemon:Pokemon)=>{\n      if(pokemon){\n        this.pokemonService.selectedPokemon.next(pokemon);\n        this.router.navigate(['pokemon-details'], {\n          queryParams: {\n            pokemon: pokemon.id,\n          },\n        })\n      }else{\n        this.router.navigate(['pokemon-not-found'])\n      }\n    },\n    (error)=>{\n      this.toastr.error(\"Internal Error.\")\n    })\n  }\n\n  searchRandom(){\n    this.pokemonService.getRandomPokemon().subscribe(res=>{console.log(res)})\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".background{\r\n    font-family: Roboto;\r\n    font-size: 1.5vh;\r\n    font-style: normal;\r\n    font-weight: 700;\r\n    line-height: normal;\r\n    height: 100vh;\r\n    width: 100vw;\r\n    background: linear-gradient(32deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 48%, rgb(88, 88, 88) 48%, rgb(88, 88, 88) 54%, rgb(254, 88, 88) 54%, rgb(254, 88, 88) 100%, rgba(255, 255, 255, 0.4570203081) 180%);\r\n\r\n    .pikachu-img{\r\n        position: absolute;\r\n        bottom: 0;\r\n        right: 0;\r\n        height: 80vh;\r\n        animation-name: pikachuAnimation;\r\n        animation-duration: 1s;\r\n    }\r\n\r\n    .search-container{\r\n        border-radius: 1vh;\r\n        border: 0.3vh solid #595854;\r\n        background: #FFF;\r\n        width: 24vw;\r\n        height: 40vh;\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        transform: translate(-50%, -50%);\r\n        display: flex;\r\n        flex-direction: column;\r\n        align-items: center;\r\n        animation-name: pikachuAnimation;\r\n        animation-duration: 1s;\r\n\r\n       \r\n        .ball-img{\r\n            height: 8vh;\r\n            margin-top: 5vh;\r\n        }\r\n        \r\n        .form-container{\r\n\r\n\r\n            .title{\r\n                margin-top: 2vh; \r\n                margin-bottom: 1vh;               \r\n            }\r\n            input{\r\n                border-radius: 0.5vh;\r\n                border: 0.1vh solid #CFC7C2;\r\n                background: #FAFAFA;\r\n                height: 5vh;\r\n                width: 13vw;\r\n                margin-bottom: 3vh;\r\n                padding: 0px 0.5vw;\r\n                font-size: 1.5vh;\r\n            }\r\n            .btns-container{\r\n                cursor: pointer;\r\n                display: flex;\r\n                justify-content: space-between;\r\n                .btn{\r\n                    width: 5vw;\r\n                    flex-shrink: 0;\r\n                    border-radius: 0.5vh;\r\n                    background: #FE5858;\r\n                    color:white;\r\n                    text-align: center;\r\n                    padding: 1.3vh 0;\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n@keyframes pikachuAnimation {\r\n    0%   {opacity:0 ;}\r\n    100% {opacity:1;}\r\n}",
+                    "styleUrl": "./main-search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "toastr",
+                        "type": "ToastrService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "toastr",
+                        "type": "ToastrService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "\r\n<div class=\"background\">\r\n    <img class=\"pikachu-img\" src=\"https://ik.imagekit.io/do4qnws3h/pikachu.png?updatedAt=1700346989409\"/>\r\n\r\n    <div class=\"search-container\">\r\n        <img class=\"ball-img\" src=\"https://ik.imagekit.io/do4qnws3h/Pokeball.png\"/>\r\n        <div class=\"form-container\">\r\n            <div class=\"title\">\r\n                Pokemon Name or Id\r\n            </div>\r\n            <input type=\"text\" [(ngModel)]=\"nameId\"/>\r\n            <div class=\"btns-container\">\r\n                <div (click)=\"search()\" class=\"btn search-btn\">\r\n                    Search\r\n                </div>\r\n                <div (click)=\"searchRandom()\" class=\"btn random-btn\">\r\n                    Random\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</div>"
+        },
+        {
+            "name": "PokemonDetailsComponent",
+            "id": "component-PokemonDetailsComponent-4f034296745d0621dc14a62df84efe88c21465a30bf581fdf6e4588fb71fa3ee005a00c9b80fe311eb99c3576fc66f8a6daa7e29a3eb2ad33b1a5c1c2dfeb7de",
+            "file": "src/app/pages/pokemon-details/pokemon-details.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-pokemon-details",
+            "styleUrls": [
+                "./pokemon-details.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./pokemon-details.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "selectedPokemon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Pokemon",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "selectedTab",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "TypeColor",
+                    "defaultValue": "TypeColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "backToMain",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 45,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { ActivatedRoute, Router } from '@angular/router';\nimport { Pokemon } from 'src/app/models/Pokemon';\nimport { TypeColor } from 'src/app/models/TypeColor';\nimport { PokemonService } from 'src/app/services/pokemon.service';\n\n@Component({\n  selector: 'app-pokemon-details',\n  templateUrl: './pokemon-details.component.html',\n  styleUrls: ['./pokemon-details.component.scss']\n})\nexport class PokemonDetailsComponent implements OnInit {\n  selectedPokemon?:Pokemon\n  TypeColor:any=TypeColor\n  selectedTab=1\n  constructor(private activatedRoute:ActivatedRoute,private router:Router,private pokemonService:PokemonService) { }\n\n  ngOnInit() {\n    this.pokemonService.selectedPokemon.subscribe(pokemon=>{\n      if(pokemon){\n        this.selectedPokemon = pokemon\n      }else{\n        this.activatedRoute.queryParams.subscribe((params:any)=>{\n          if(params.pokemon){\n            this.pokemonService.GetPokemon(params.pokemon,null).subscribe((pokemon:Pokemon)=>{\n              if(pokemon){\n                this.selectedPokemon = pokemon\n                this.pokemonService.selectedPokemon.next(this.selectedPokemon)\n                console.log(pokemon)\n              }else{\n                this.backToMain()\n              }\n            })\n          }else{\n            this.backToMain()\n          }\n        })\n      }\n    })\n   \n  }\n  get pokemonTypeColor(){\n    return this.TypeColor[this.selectedPokemon?.pokemon_v2_pokemontypes![0].pokemon_v2_type.name!]\n  }\n  backToMain(){\n    this.router.navigate([''])\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container{\r\n    font-family: Abel;\r\n    color: #4F4F4F;\r\n    height: 100vh;\r\n    width: 100vw;\r\n\r\n    app-back{\r\n        position: absolute;\r\n        left: 9vw;\r\n        top: 6vh;\r\n    }\r\n    .content-container{\r\n        background-color: white;\r\n        width: 80vw;\r\n        position: absolute;\r\n        bottom: 0;\r\n        left: 50%;\r\n        height: 75vh;\r\n        transform: translate(-50%);\r\n        border-radius: 5vh 5vh 0px 0px;\r\n\r\n        #pokemon-img{\r\n            position: absolute;\r\n            left: 50%;\r\n            top: -20vh;\r\n            height: 28vh;\r\n            transform: translate(-50%);\r\n        }\r\n        #pokemon-title{\r\n            position: absolute;\r\n            left: 50%;\r\n            transform: translate(-50%);\r\n            top: 9vh;\r\n            font-size: 5vh;\r\n        }\r\n        #type-container{\r\n            display: flex;\r\n            position: absolute;\r\n            top: 17vh;\r\n            left: 50%;\r\n            transform: translate(-50%);\r\n            gap: 3vw;\r\n\r\n            .type{\r\n                font-size: 1.5vh;\r\n                background-color: #5DBE62;\r\n                color: white;\r\n                padding: 0.8vh 2vw;\r\n                border-radius: 1.5vh;\r\n            }\r\n        }\r\n\r\n        #flavorText{\r\n            width: 60vw;\r\n            position: absolute;\r\n            top: 26vh;\r\n            text-align: center;\r\n            left: 50%;\r\n            transform: translate(-50%);\r\n            font-size: 2vh;\r\n        }\r\n\r\n        .tabs-container{\r\n            display: flex;\r\n            gap: 10vw;\r\n            top: 36vh;\r\n            position: absolute;\r\n            left: 50%;\r\n            transform: translate(-50%);\r\n\r\n            .selected-tab{\r\n                color: white;\r\n            }\r\n            .tab{\r\n                cursor: pointer;\r\n                padding: 0.8vh 2vw;\r\n                border-radius: 1.5vh;\r\n                font-size: 1.5vh;\r\n            }\r\n        }\r\n    }\r\n}",
+                    "styleUrl": "./pokemon-details.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "activatedRoute",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "activatedRoute",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "pokemonTypeColor": {
+                    "name": "pokemonTypeColor",
+                    "getSignature": {
+                        "name": "pokemonTypeColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 42
+                    }
+                }
+            },
+            "templateData": "<div class=\"container\" [ngStyle]=\"{'background-color': pokemonTypeColor}\">\n  <app-back></app-back>\n  <div class=\"content-container\">\n    <img id=\"pokemon-img\" src=\"https://img.pokemondb.net/sprites/home/normal/{{selectedPokemon?.name}}.png\"/>\n    <div id=\"pokemon-title\">{{selectedPokemon?.name| titlecase}}</div>\n    <div id=\"type-container\">\n      <div class=\"type\" [ngStyle]=\"{'background-color': TypeColor[type.pokemon_v2_type.name]}\" *ngFor=\"let type of selectedPokemon?.pokemon_v2_pokemontypes\">\n        {{ type.pokemon_v2_type.name | uppercase }}\n      </div>\n    </div>\n    \n    <div id=\"flavorText\">\n      {{selectedPokemon?.pokemon_v2_pokemonspecy?.pokemon_v2_pokemonspeciesflavortexts![0].flavor_text}}\n    </div>\n\n    <div class=\"tabs-container\"  [ngStyle]=\"{'color': pokemonTypeColor}\">\n      <div class=\"tab\" (click)=\"selectedTab=1\" [ngStyle]=\"{'background-color':selectedTab==1? pokemonTypeColor:'' }\" [ngClass]=\"{'selected-tab':selectedTab==1}\">Stats</div>\n      <div class=\"tab\" (click)=\"selectedTab=2\" [ngStyle]=\"{'background-color':selectedTab==2? pokemonTypeColor:''}\" [ngClass]=\"{'selected-tab':selectedTab==2}\">Evolutions</div>\n      <div class=\"tab\" (click)=\"selectedTab=3\" [ngStyle]=\"{'background-color':selectedTab==3? pokemonTypeColor:''}\" [ngClass]=\"{'selected-tab':selectedTab==3}\">MOVES</div>\n    </div>\n\n    <app-stats *ngIf=\"selectedTab==1\"></app-stats>\n    <app-evolutions *ngIf=\"selectedTab==2\"></app-evolutions>\n  </div>\n</div>"
+        },
+        {
+            "name": "PokemonNotFoundComponent",
+            "id": "component-PokemonNotFoundComponent-8e5cc2f8b4cec26a94952987fdde120088ea244cd320a81c40788abea003df96901cc1eb6853f1ab979bc52ce89d7c8730e29b7d57b90611a241414891cc5f5f",
+            "file": "src/app/pages/pokemon-not-found/pokemon-not-found.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-pokemon-not-found",
+            "styleUrls": [
+                "./pokemon-not-found.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./pokemon-not-found.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'app-pokemon-not-found',\n  templateUrl: './pokemon-not-found.component.html',\n  styleUrls: ['./pokemon-not-found.component.scss']\n})\nexport class PokemonNotFoundComponent   {\n\n  constructor(private router:Router) { }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container{\r\n    background-color: #FE5858;\r\n    height: 100vh;\r\n    width: 100vw;\r\n\r\n    #stupidDuckImg{\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        transform: translate(-50%, -50%);\r\n        height: 37vh;\r\n    }\r\n\r\n    #noPokemonFoundTxt{\r\n        color: white;\r\n        font-family: \"Single Day\";\r\n        font-size: 6vh;\r\n        position: absolute;\r\n        left: 50%;\r\n        top: 19vh;\r\n        transform: translate(-50%);\r\n    }\r\n\r\n    app-back{\r\n        position: absolute;\r\n        left: 8vw;\r\n        top: 17vh;\r\n    }\r\n}",
+                    "styleUrl": "./pokemon-not-found.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"container\">\n  <app-back></app-back>\n  <img id=\"stupidDuckImg\" src=\"https://ik.imagekit.io/do4qnws3h/StupidDuck.png?updatedAt=1700391898152\">\n  <div id=\"noPokemonFoundTxt\">\n    No Pokemon Found!\n  </div>\n</div>"
+        },
+        {
+            "name": "StatsComponent",
+            "id": "component-StatsComponent-dddc271e05ea499355615882bf44ab8349b5b07a1c6d7ab1f0e7f4b3a1db7d07d6ed54954cf0a442b416b5aad9ab13965bdf6cf3f00d70a6ea6e13b567ed7121",
+            "file": "src/app/pages/pokemon-details/stats/stats.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stats",
+            "styleUrls": [
+                "./stats.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./stats.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "selectedPokemon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Pokemon | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "stats",
+                    "defaultValue": "Stats",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "TypeColor",
+                    "defaultValue": "TypeColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { Pokemon } from 'src/app/models/Pokemon';\nimport { Stats } from 'src/app/models/Stats';\nimport { TypeColor } from 'src/app/models/TypeColor';\nimport { PokemonService } from 'src/app/services/pokemon.service';\n\n@Component({\n  selector: 'app-stats',\n  templateUrl: './stats.component.html',\n  styleUrls: ['./stats.component.scss']\n})\nexport class StatsComponent implements OnInit {\n  \n  TypeColor:any=TypeColor\n  selectedPokemon!:Pokemon|null;\n  stats:any=Stats\n\n  constructor(private pokemonService:PokemonService) { }\n\n  ngOnInit() {\n    this.pokemonService.selectedPokemon.subscribe((pokemon)=>{\n      this.selectedPokemon=pokemon\n      console.log(\"stat\",pokemon)\n    })\n  }\n\n  get pokemonTypeColor(){\n    return this.TypeColor[this.selectedPokemon?.pokemon_v2_pokemontypes![0].pokemon_v2_type.name!]\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container{\r\n    color: black;\r\n    position: absolute;\r\n    left: 50%;\r\n    bottom: 14vh;\r\n    transform: translate(-50%);\r\n    font-size: 1.8vh;\r\n\r\n    .stat-container{\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        .stat-title{\r\n            width: 2.5vw;\r\n        }\r\n\r\n        .base-stat-counter{\r\n            width: 10vw;\r\n            background-color: #F0F0F0;\r\n            height: 1vh;\r\n            margin-left: 1vw;\r\n            border-radius: 0.3vh;\r\n\r\n            .stat-value{\r\n                height: 1vh;\r\n                border-radius: 0.3vh;\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+                    "styleUrl": "./stats.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "pokemonService",
+                        "type": "PokemonService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "pokemonTypeColor": {
+                    "name": "pokemonTypeColor",
+                    "getSignature": {
+                        "name": "pokemonTypeColor",
+                        "type": "",
+                        "returnType": "",
+                        "line": 27
+                    }
+                }
+            },
+            "templateData": "<div class=\"container\">\n  <div class=\"stat-container\" *ngFor=\"let stat of selectedPokemon?.pokemon_v2_pokemonstats\">\n    <div class=\"stat-title\" [ngStyle]=\"{'color': pokemonTypeColor}\"> \n      {{stats[stat.pokemon_v2_stat.name]}}\n    </div>\n    <div>\n      {{stat.effort|number : '3.0'}}\n    </div>\n    <div class=\"base-stat-counter\">\n      <div [ngStyle]=\"{'background-color': pokemonTypeColor,'width':stat.base_stat+'%'}\" class=\"stat-value\"></div>      \n    </div>\n  </div>\n</div>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-042df52efc844e6a448a7421c3d9bea3996d10a801b3192fa5ecc33ef408ef8b3af5f740778e52f8ddcb42d197e908c5c032d0a35fea784e323a8ddc4e38b3a2",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { GraphQLModule } from './graphql.module';\nimport { HttpClientModule } from '@angular/common/http';\nimport { MainSearchComponent } from './pages/main-search-component/main-search.component';\nimport { FormsModule } from '@angular/forms';\nimport { PokemonNotFoundComponent } from './pages/pokemon-not-found/pokemon-not-found.component';\nimport { PokemonDetailsComponent } from './pages/pokemon-details/pokemon-details.component';\nimport { BackComponent } from './pages/back/back.component';\nimport { StatsComponent } from './pages/pokemon-details/stats/stats.component';\nimport { EvolutionsComponent } from './pages/pokemon-details/evolutions/evolutions.component';\nimport { ToastrModule } from 'ngx-toastr';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { PokemonService } from './services/pokemon.service';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    MainSearchComponent,\n    PokemonNotFoundComponent,\n    PokemonDetailsComponent,\n    BackComponent,\n    StatsComponent,\n    EvolutionsComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    GraphQLModule,\n    HttpClientModule,\n    FormsModule ,\n    BrowserAnimationsModule,\n    ToastrModule.forRoot(),\n  ],\n  providers: [PokemonService],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "PokemonService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "BackComponent"
+                        },
+                        {
+                            "name": "EvolutionsComponent"
+                        },
+                        {
+                            "name": "MainSearchComponent"
+                        },
+                        {
+                            "name": "PokemonDetailsComponent"
+                        },
+                        {
+                            "name": "PokemonNotFoundComponent"
+                        },
+                        {
+                            "name": "StatsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "GraphQLModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-28a407e79e34b1ad0c0e6f2ebf36c0cca2c0d273ed7558ffbb0cb3829c330664a2f8efaeaacb58e01b8023ccfecd3641a53ff9b3bf07e04a561a77e388cc97db",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { MainSearchComponent } from './pages/main-search-component/main-search.component';\nimport { PokemonNotFoundComponent } from './pages/pokemon-not-found/pokemon-not-found.component';\nimport { PokemonDetailsComponent } from './pages/pokemon-details/pokemon-details.component';\n\nconst routes: Routes = [\n  {\n    path: '',\n    component: MainSearchComponent\n  },\n  {\n    path: 'pokemon-not-found',\n    component: PokemonNotFoundComponent\n  },\n  {\n    path: 'pokemon-details',\n    component: PokemonDetailsComponent\n  },\n  \n\t{\n\t\tpath: \"**\",\n\t\tredirectTo: \"\",\n\t},\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "GraphQLModule",
+            "id": "module-GraphQLModule-005e107cb15e5f6a2b018a3627b33c640ba6680df41b8dcb5ceb98468831e256d0398345421da47eb3664457f87605fa90ee1ff265570779c4921b174120c812",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/graphql.module.ts",
+            "methods": [],
+            "sourceCode": "import { APOLLO_OPTIONS, ApolloModule } from 'apollo-angular';\nimport { HttpLink } from 'apollo-angular/http';\nimport { NgModule } from '@angular/core';\nimport { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';\n\nconst uri = 'https://beta.pokeapi.co/graphql/v1beta'; // <-- add the URL of the GraphQL server here\nexport function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {\n  return {\n    link: httpLink.create({ uri }),\n    cache: new InMemoryCache(),\n  };\n}\n\n@NgModule({\n  exports: [ApolloModule],\n  providers: [\n    {\n      provide: APOLLO_OPTIONS,\n      useFactory: createApollo,\n      deps: [HttpLink],\n    },\n  ],\n})\nexport class GraphQLModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "ColorFilter",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/models/ColorFilter.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\r\n\tnormal : \"invert(79%) sepia(3%) saturate(3056%) hue-rotate(22deg) brightness(82%) contrast(93%)\",\r\n\twater : \"invert(54%) sepia(38%) saturate(660%) hue-rotate(167deg) brightness(100%) contrast(93%)\",\r\n\tfire : \"invert(72%) sepia(63%) saturate(4032%) hue-rotate(336deg) brightness(99%) contrast(88%)\",\r\n\tgrass : \"invert(72%) sepia(16%) saturate(1136%) hue-rotate(50deg) brightness(94%) contrast(88%)\",\r\n    electric:\"invert(90%) sepia(55%) saturate(6279%) hue-rotate(320deg) brightness(98%) contrast(99%)\",\r\n\tice : \"invert(90%) sepia(11%) saturate(914%) hue-rotate(126deg) brightness(93%) contrast(84%)\",\r\n\tfight : \"invert(24%) sepia(37%) saturate(3726%) hue-rotate(341deg) brightness(97%) contrast(91%)\",\r\n\tpoison : \"invert(53%) sepia(93%) saturate(1725%) hue-rotate(238deg) brightness(85%) contrast(88%)\",\r\n\tground : \"invert(76%) sepia(62%) saturate(301%) hue-rotate(359deg) brightness(91%) contrast(93%)\",\r\n\tflight : \"invert(77%) sepia(26%) saturate(6844%) hue-rotate(207deg) brightness(100%) contrast(87%)\",\r\n\tpsychic : \"invert(52%) sepia(16%) saturate(3408%) hue-rotate(303deg) brightness(97%) contrast(91%)\",\r\n\tbug : \"invert(64%) sepia(9%) saturate(3064%) hue-rotate(27deg) brightness(110%) contrast(76%)\",\r\n\trock : \"invert(55%) sepia(59%) saturate(404%) hue-rotate(10deg) brightness(101%) contrast(91%)\",\r\n\tghost : \"invert(34%) sepia(6%) saturate(4267%) hue-rotate(220deg) brightness(101%) contrast(74%)\",\r\n\tdark : \"invert(34%) sepia(36%) saturate(363%) hue-rotate(340deg) brightness(92%) contrast(85%)\",\r\n\tdragon : \"invert(28%) sepia(50%) saturate(4846%) hue-rotate(246deg) brightness(96%) contrast(99%)\",\r\n\tstreet : \"invert(81%) sepia(6%) saturate(644%) hue-rotate(200deg) brightness(92%) contrast(91%)\",\r\n\tfairy : \"invert(89%) sepia(43%) saturate(2515%) hue-rotate(288deg) brightness(110%) contrast(88%)\",\r\n} as const"
+            },
+            {
+                "name": "GET_ALL_POKEMONS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/operations/graphql.operations.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "gql`\r\nquery AllPokemonsQuery {\r\n    pokemon_v2_pokemon {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+            },
+            {
+                "name": "GET_POKEMON_BY_ID",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/operations/graphql.operations.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "gql`\r\nquery ($id: Int!) {\r\n    pokemon_v2_pokemon(where: {id: {_eq: $id}} ) {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+            },
+            {
+                "name": "GET_POKEMON_BY_NAME",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/operations/graphql.operations.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "gql`\r\nquery ($name: String!) {\r\n    pokemon_v2_pokemon(where: {name: {_eq: $name}}) {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/main-search.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<MainSearchComponent>",
+                "defaultValue": "{\r\n title: \"Pokemon/MainSearch\",\r\n component: MainSearchComponent\r\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    apolloClient: {\n      MockedProvider,\n    },\n  \n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/main-search.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "MainSearchStory",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Stats",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/models/Stats.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\r\n\thp : \"HP\",\r\n\tattack : \"ATK\",\r\n\tdefense : \"DEF\",\r\n    \"special-attack\":\"SATK\",\r\n\t\"special-defense\" : \"SDEF\",\r\n\tspeed : \"SPD\",\r\n\t\r\n} as const"
+            },
+            {
+                "name": "TypeColor",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/models/TypeColor.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "{\r\n\tnormal : \"#A8A87B\",\r\n\twater : \"#559EDF\",\r\n\tfire : \"#EE803B\",\r\n\tgrass : \"#88BE5D\",\r\n    electric:\"#F7CF43\",\r\n\tice : \"#9AD8D8\",\r\n\tfight : \"#BE322E\",\r\n\tpoison : \"#B563CE\",\r\n\tground : \"#DFBF6E\",\r\n\tflight : \"#A893ED\",\r\n\tpsychic : \"#EC5C89\",\r\n\tbug : \"#A8B732\",\r\n\trock : \"#B89F41\",\r\n\tghost : \"#705A97\",\r\n\tdark : \"#705849\",\r\n\tdragon : \"#7043F4\",\r\n\tstreet : \"#B8B9CF\",\r\n\tfairy : \"#EFB7BD\",\r\n} as const"
+            },
+            {
+                "name": "uri",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/graphql.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "'https://beta.pokeapi.co/graphql/v1beta'"
+            }
+        ],
+        "functions": [
+            {
+                "name": "createApollo",
+                "file": "src/app/graphql.module.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "httpLink",
+                        "type": "HttpLink",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "returnType": "ApolloClientOptions<any>",
+                "jsdoctags": [
+                    {
+                        "name": "httpLink",
+                        "type": "HttpLink",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [
+            {
+                "name": "MainSearchStory",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<MainSearchComponent>",
+                "file": "src/stories/main-search.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/models/ColorFilter.ts": [
+                {
+                    "name": "ColorFilter",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/models/ColorFilter.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\r\n\tnormal : \"invert(79%) sepia(3%) saturate(3056%) hue-rotate(22deg) brightness(82%) contrast(93%)\",\r\n\twater : \"invert(54%) sepia(38%) saturate(660%) hue-rotate(167deg) brightness(100%) contrast(93%)\",\r\n\tfire : \"invert(72%) sepia(63%) saturate(4032%) hue-rotate(336deg) brightness(99%) contrast(88%)\",\r\n\tgrass : \"invert(72%) sepia(16%) saturate(1136%) hue-rotate(50deg) brightness(94%) contrast(88%)\",\r\n    electric:\"invert(90%) sepia(55%) saturate(6279%) hue-rotate(320deg) brightness(98%) contrast(99%)\",\r\n\tice : \"invert(90%) sepia(11%) saturate(914%) hue-rotate(126deg) brightness(93%) contrast(84%)\",\r\n\tfight : \"invert(24%) sepia(37%) saturate(3726%) hue-rotate(341deg) brightness(97%) contrast(91%)\",\r\n\tpoison : \"invert(53%) sepia(93%) saturate(1725%) hue-rotate(238deg) brightness(85%) contrast(88%)\",\r\n\tground : \"invert(76%) sepia(62%) saturate(301%) hue-rotate(359deg) brightness(91%) contrast(93%)\",\r\n\tflight : \"invert(77%) sepia(26%) saturate(6844%) hue-rotate(207deg) brightness(100%) contrast(87%)\",\r\n\tpsychic : \"invert(52%) sepia(16%) saturate(3408%) hue-rotate(303deg) brightness(97%) contrast(91%)\",\r\n\tbug : \"invert(64%) sepia(9%) saturate(3064%) hue-rotate(27deg) brightness(110%) contrast(76%)\",\r\n\trock : \"invert(55%) sepia(59%) saturate(404%) hue-rotate(10deg) brightness(101%) contrast(91%)\",\r\n\tghost : \"invert(34%) sepia(6%) saturate(4267%) hue-rotate(220deg) brightness(101%) contrast(74%)\",\r\n\tdark : \"invert(34%) sepia(36%) saturate(363%) hue-rotate(340deg) brightness(92%) contrast(85%)\",\r\n\tdragon : \"invert(28%) sepia(50%) saturate(4846%) hue-rotate(246deg) brightness(96%) contrast(99%)\",\r\n\tstreet : \"invert(81%) sepia(6%) saturate(644%) hue-rotate(200deg) brightness(92%) contrast(91%)\",\r\n\tfairy : \"invert(89%) sepia(43%) saturate(2515%) hue-rotate(288deg) brightness(110%) contrast(88%)\",\r\n} as const"
+                }
+            ],
+            "src/app/operations/graphql.operations.ts": [
+                {
+                    "name": "GET_ALL_POKEMONS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/operations/graphql.operations.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "gql`\r\nquery AllPokemonsQuery {\r\n    pokemon_v2_pokemon {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+                },
+                {
+                    "name": "GET_POKEMON_BY_ID",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/operations/graphql.operations.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "gql`\r\nquery ($id: Int!) {\r\n    pokemon_v2_pokemon(where: {id: {_eq: $id}} ) {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+                },
+                {
+                    "name": "GET_POKEMON_BY_NAME",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/operations/graphql.operations.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "gql`\r\nquery ($name: String!) {\r\n    pokemon_v2_pokemon(where: {name: {_eq: $name}}) {\r\n      name\r\n      id\r\n      pokemon_v2_pokemontypes {\r\n        pokemon_v2_type {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonstats {\r\n        base_stat\r\n        effort\r\n        pokemon_v2_stat {\r\n          name\r\n        }\r\n      }\r\n      pokemon_v2_pokemonspecy {\r\n        pokemon_v2_pokemoncolor {\r\n          name\r\n        }\r\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {language_id: {_eq: 9}}) {\r\n          flavor_text\r\n        }\r\n        pokemon_v2_evolutionchain {\r\n          pokemon_v2_pokemonspecies(order_by: {order: asc}) {\r\n            name\r\n            order\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n  \r\n`"
+                }
+            ],
+            "src/stories/main-search.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/main-search.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<MainSearchComponent>",
+                    "defaultValue": "{\r\n title: \"Pokemon/MainSearch\",\r\n component: MainSearchComponent\r\n}"
+                },
+                {
+                    "name": "primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/main-search.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MainSearchStory",
+                    "defaultValue": "{}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    apolloClient: {\n      MockedProvider,\n    },\n  \n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "src/app/models/Stats.ts": [
+                {
+                    "name": "Stats",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/models/Stats.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\r\n\thp : \"HP\",\r\n\tattack : \"ATK\",\r\n\tdefense : \"DEF\",\r\n    \"special-attack\":\"SATK\",\r\n\t\"special-defense\" : \"SDEF\",\r\n\tspeed : \"SPD\",\r\n\t\r\n} as const"
+                }
+            ],
+            "src/app/models/TypeColor.ts": [
+                {
+                    "name": "TypeColor",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/models/TypeColor.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "{\r\n\tnormal : \"#A8A87B\",\r\n\twater : \"#559EDF\",\r\n\tfire : \"#EE803B\",\r\n\tgrass : \"#88BE5D\",\r\n    electric:\"#F7CF43\",\r\n\tice : \"#9AD8D8\",\r\n\tfight : \"#BE322E\",\r\n\tpoison : \"#B563CE\",\r\n\tground : \"#DFBF6E\",\r\n\tflight : \"#A893ED\",\r\n\tpsychic : \"#EC5C89\",\r\n\tbug : \"#A8B732\",\r\n\trock : \"#B89F41\",\r\n\tghost : \"#705A97\",\r\n\tdark : \"#705849\",\r\n\tdragon : \"#7043F4\",\r\n\tstreet : \"#B8B9CF\",\r\n\tfairy : \"#EFB7BD\",\r\n} as const"
+                }
+            ],
+            "src/app/graphql.module.ts": [
+                {
+                    "name": "uri",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/graphql.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "'https://beta.pokeapi.co/graphql/v1beta'"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/graphql.module.ts": [
+                {
+                    "name": "createApollo",
+                    "file": "src/app/graphql.module.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "httpLink",
+                            "type": "HttpLink",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "ApolloClientOptions<any>",
+                    "jsdoctags": [
+                        {
+                            "name": "httpLink",
+                            "type": "HttpLink",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/stories/main-search.stories.ts": [
+                {
+                    "name": "MainSearchStory",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<MainSearchComponent>",
+                    "file": "src/stories/main-search.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "",
+                        "component": "MainSearchComponent"
+                    },
+                    {
+                        "path": "pokemon-not-found",
+                        "component": "PokemonNotFoundComponent"
+                    },
+                    {
+                        "path": "pokemon-details",
+                        "component": "PokemonDetailsComponent"
+                    },
+                    {
+                        "path": "**",
+                        "redirectTo": ""
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql.module.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "createApollo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/graphql.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "uri",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/ColorFilter.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorFilter",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/DataResponsePokemon.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "DataResponsePokemon",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/Pokemon.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Pokemon",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/Specy.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Specy",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/SpecyElement.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "SpecyElement",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/Stat.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Stat",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/Stats.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Stats",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/Type.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Type",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/TypeColor.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypeColor",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/operations/graphql.operations.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GET_ALL_POKEMONS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/operations/graphql.operations.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GET_POKEMON_BY_ID",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/operations/graphql.operations.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GET_POKEMON_BY_NAME",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/back/back.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BackComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/main-search-component/main-search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MainSearchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/pokemon-details/evolutions/evolutions.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EvolutionsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/pokemon-details/pokemon-details.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PokemonDetailsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/pokemon-details/stats/stats.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StatsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/pokemon-not-found/pokemon-not-found.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PokemonNotFoundComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/pokemon.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "PokemonService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/main-search.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/main-search.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

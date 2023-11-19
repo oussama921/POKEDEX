@@ -6,7 +6,6 @@ export interface Pokemon{
     id:number;
     name:string;
     pokemon_v2_pokemonspecy:Specy
-    pokemon_v2_pokemonsprites:[{sprites:string}];
     pokemon_v2_pokemonstats:Stat[]
     pokemon_v2_pokemontypes:Type[]
 

@@ -1,3 +1,4 @@
 export interface SpecyElement{
-    name:string 
+    name:string ;
+    order:number;
 }

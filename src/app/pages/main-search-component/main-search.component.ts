@@ -5,11 +5,11 @@ import { Pokemon } from 'src/app/models/Pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
-  selector: 'app-main-search-component',
-  templateUrl: './main-search-component.component.html',
-  styleUrls: ['./main-search-component.component.scss']
+  selector: 'app-main-search',
+  templateUrl: './main-search.component.html',
+  styleUrls: ['./main-search.component.scss']
 })
-export class MainSearchComponentComponent {
+export class MainSearchComponent {
 
   nameId:any;
   constructor(private pokemonService:PokemonService,private router:Router,private toastr: ToastrService){}

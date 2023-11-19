@@ -31,9 +31,6 @@ query ($id: Int!) {
           }
         }
       }
-      pokemon_v2_pokemonsprites {
-        sprites
-      }
     }
   }
   
@@ -69,9 +66,6 @@ query ($name: String!) {
             order
           }
         }
-      }
-      pokemon_v2_pokemonsprites {
-        sprites
       }
     }
   }
@@ -109,9 +103,6 @@ query AllPokemonsQuery {
             order
           }
         }
-      }
-      pokemon_v2_pokemonsprites {
-        sprites
       }
     }
   }

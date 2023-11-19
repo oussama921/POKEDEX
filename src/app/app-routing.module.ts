@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainSearchComponentComponent } from './pages/main-search-component/main-search-component.component';
+import { MainSearchComponent } from './pages/main-search-component/main-search.component';
 import { PokemonNotFoundComponent } from './pages/pokemon-not-found/pokemon-not-found.component';
 import { PokemonDetailsComponent } from './pages/pokemon-details/pokemon-details.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainSearchComponentComponent
+    component: MainSearchComponent
   },
   {
     path: 'pokemon-not-found',
@@ -16,7 +16,12 @@ const routes: Routes = [
   {
     path: 'pokemon-details',
     component: PokemonDetailsComponent
-  }
+  },
+  
+	{
+		path: "**",
+		redirectTo: "",
+	},
 ];
 
 @NgModule({
