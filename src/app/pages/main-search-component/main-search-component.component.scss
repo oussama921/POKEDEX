@@ -1,0 +1,81 @@
+.background{
+    font-family: Roboto;
+    font-size: 1.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(32deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 48%, rgb(88, 88, 88) 48%, rgb(88, 88, 88) 54%, rgb(254, 88, 88) 54%, rgb(254, 88, 88) 100%, rgba(255, 255, 255, 0.4570203081) 180%);
+
+    .pikachu-img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 80vh;
+        animation-name: pikachuAnimation;
+        animation-duration: 1s;
+    }
+
+    .search-container{
+        border-radius: 1vh;
+        border: 0.3vh solid #595854;
+        background: #FFF;
+        width: 24vw;
+        height: 40vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-name: pikachuAnimation;
+        animation-duration: 1s;
+
+       
+        .ball-img{
+            height: 8vh;
+            margin-top: 5vh;
+        }
+        
+        .form-container{
+
+
+            .title{
+                margin-top: 2vh; 
+                margin-bottom: 1vh;               
+            }
+            input{
+                border-radius: 0.5vh;
+                border: 0.1vh solid #CFC7C2;
+                background: #FAFAFA;
+                height: 5vh;
+                width: 13vw;
+                margin-bottom: 3vh;
+                padding: 0px 0.5vw;
+                font-size: 1.5vh;
+            }
+            .btns-container{
+                display: flex;
+                justify-content: space-between;
+                .btn{
+                    width: 5vw;
+                    flex-shrink: 0;
+                    border-radius: 0.5vh;
+                    background: #FE5858;
+                    color:white;
+                    text-align: center;
+                    padding: 1.3vh 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes pikachuAnimation {
+    0%   {opacity:0 ;}
+    100% {opacity:1;}
+}
