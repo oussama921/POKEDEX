@@ -2,6 +2,7 @@ import { APOLLO_OPTIONS, ApolloModule } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { NgModule } from '@angular/core';
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
+import { PokemonService } from './services/pokemon.service';
 
 const uri = 'https://beta.pokeapi.co/graphql/v1beta'; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
@@ -19,6 +20,7 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
       useFactory: createApollo,
       deps: [HttpLink],
     },
+    PokemonService
   ],
 })
 export class GraphQLModule {}

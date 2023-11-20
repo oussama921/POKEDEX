@@ -15,6 +15,7 @@ import { EvolutionsComponent } from './pages/pokemon-details/evolutions/evolutio
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonService } from './services/pokemon.service';
+import { Apollo } from 'apollo-angular';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { PokemonService } from './services/pokemon.service';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [PokemonService],
+  providers: [PokemonService, Apollo],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
