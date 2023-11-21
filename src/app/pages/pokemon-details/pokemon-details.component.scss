@@ -19,20 +19,13 @@
         transform: translate(-50%);
         border-radius: 5vh 5vh 0px 0px;
 
-        #pokemon-img{
+        .title-container{
             position: absolute;
             left: 50%;
             top: -20vh;
             height: 28vh;
             transform: translate(-50%);
-        }
-        #pokemon-title{
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            top: 9vh;
-            font-size: 5vh;
-        }
+        }   font-size: 5vh;
         #type-container{
             display: flex;
             position: absolute;
@@ -41,13 +34,13 @@
             transform: translate(-50%);
             gap: 3vw;
 
-            .type{
-                font-size: 1.5vh;
-                background-color: #5DBE62;
-                color: white;
-                padding: 0.8vh 2vw;
-                border-radius: 1.5vh;
-            }
+            // .type{
+            //     font-size: 1.5vh;
+            //     background-color: #5DBE62;
+            //     color: white;
+            //     padding: 0.8vh 2vw;
+            //     border-radius: 1.5vh;
+            // }
         }
 
         #flavorText{

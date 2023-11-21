@@ -10,12 +10,8 @@
             </div>
             <input type="text" [(ngModel)]="nameId"/>
             <div class="btns-container">
-                <div (click)="search()" class="btn search-btn">
-                    Search
-                </div>
-                <div (click)="searchRandom()" class="btn random-btn">
-                    Random
-                </div>
+                <app-button [label]="'search'" (triggerEvent)="search()" ></app-button>
+                <app-button [label]="'Random'" (triggerEvent)="searchRandom()" ></app-button>
             </div>
         </div>
     </div>

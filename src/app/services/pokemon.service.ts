@@ -30,7 +30,7 @@ export class PokemonService {
     return this.apollo.watchQuery<DataResponsePokemon>({
       query: GET_ALL_POKEMONS,
     }).valueChanges.pipe(map((res)=>{
-      return res.data.pokemon_v2_pokemon[Math.floor(Math.random() * (res.data.pokemon_v2_pokemon.length - 0) + 0)]
+      return res.data.pokemon_v2_pokemon[Math.floor(Math.random() * (res.data.pokemon_v2_pokemon.length-1))]
     }));
   }
 }
