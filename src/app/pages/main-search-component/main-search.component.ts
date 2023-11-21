@@ -30,7 +30,7 @@ export class MainSearchComponent {
       id = this.nameId
     }
 
-    this.pokemonService.GetPokemon(id, name).subscribe((pokemon: Pokemon) => {
+    this.pokemonService.getPokemon(id, name).subscribe((pokemon: Pokemon) => {
       if (pokemon) {
         this.pokemonService.selectedPokemon.next(pokemon);
         this.navigateToView(pokemon.id)
@@ -38,16 +38,16 @@ export class MainSearchComponent {
         this.router.navigate(['pokemon-not-found'])
       }
     },
-      (error) => {
+      () => {
         this.ToastrService.error("Internal Error.")
       })
   }
 
   searchRandom() {
-    this.pokemonService.getRandomPokemon().subscribe(pokemon => this.navigateToView(pokemon.id))
+    this.pokemonService.getRandomPokemon().subscribe((pokemon: Pokemon) => this.navigateToView(pokemon.id))
   }
 
-  navigateToView(pokemon_id: number){
+  navigateToView(pokemon_id: number) {
     this.router.navigate(['pokemon-details'], {
       queryParams: {
         pokemon: pokemon_id,
